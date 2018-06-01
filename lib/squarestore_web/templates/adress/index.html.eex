@@ -1,0 +1,32 @@
+<h2>Listing Adresses</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Adress</th>
+      <th>Postnumber</th>
+      <th>Country</th>
+      <th>City</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for adress <- @adresses do %>
+    <tr>
+      <td><%= adress.adress %></td>
+      <td><%= adress.postnumber %></td>
+      <td><%= adress.country %></td>
+      <td><%= adress.city %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: adress_path(@conn, :show, adress), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: adress_path(@conn, :edit, adress), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: adress_path(@conn, :delete, adress), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Adress", to: adress_path(@conn, :new) %></span>

@@ -1,0 +1,28 @@
+<h2>Show Adress</h2>
+
+<ul>
+
+  <li>
+    <strong>Adress:</strong>
+    <%= @adress.adress %>
+  </li>
+
+  <li>
+    <strong>Postnumber:</strong>
+    <%= @adress.postnumber %>
+  </li>
+
+  <li>
+    <strong>Country:</strong>
+    <%= @adress.country %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @adress.city %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: adress_path(@conn, :edit, @adress) %></span>
+<span><%= link "Back", to: adress_path(@conn, :index) %></span>
