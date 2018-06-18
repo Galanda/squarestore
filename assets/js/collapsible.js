@@ -8,7 +8,7 @@ for (i = 0; i < collaps.length; i++){
     this.classList.toggle("active");
     var collapsContent = this.nextElementSibling;
     if(collapsContent.style.display === "block"){
-      collapsContent.style.display ="none";
+      collapsContent.style.display ="block";
     } else {
         collapsContent.style.display="block";
     }
